@@ -2,6 +2,10 @@
 
 A bot that can create a new row on a Google Sheet from a message on a discord channel. New features will be added slowly for better integration between Discord <-> Google Sheets.
 
+## Preview
+
+![The preview](https://cdn.discordapp.com/attachments/900398916900622376/900405793319444600/preview.gif)
+
 
 ## Setting up
 
