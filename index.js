@@ -45,7 +45,7 @@ bot.on(`messageCreate`, async(message) => {
             valueInputOption: "USER_ENTERED",
             resource: {
                 values: [
-                   [message.author.id, message.author.username, entry, message.createdTimestamp] 
+                   [message.author.id, message.author.username, entry, message.createdAt] 
                 ]
             }
         })
