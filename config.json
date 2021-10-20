@@ -1,0 +1,8 @@
+{
+    "prefix": "!donate",
+    "channelID" : "paste the discord channelID here",
+    "token" : "paste the discord bot token here",
+    "spreadSheetID" : "paste the Google spreadsheetID here",
+    "sheetName" : "Name of the sheet",
+    "confirmedReply" : "The response that will be given to confirm"
+}
