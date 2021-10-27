@@ -25,7 +25,7 @@ bot.on('ready', async() => {
     console.log(`Ready to integrate sheets with Discord!`)
 })
 
-bot.on(`messageCreate`, async(message) => {
+bot.on('messageCreate', async(message) => {
     const contentOfMessage = message.content;
 
     const client = await auth.getClient();
