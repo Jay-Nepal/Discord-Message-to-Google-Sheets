@@ -1,29 +1,23 @@
 # Discord messages to Google Sheets
 
-A bot that can create a new row on a Google Sheet from a message on a discord channel. New features will be added slowly for better integration between Discord <-> Google Sheets.
+A bot that can create a new row on a Google Sheet from a message on a discord channel. Planning new features to enable plug and play!
 
 ## Preview
 
-![The preview](https://cdn.discordapp.com/attachments/900398916900622376/900405793319444600/preview.gif)
+
 
 
 ## Setting up
 
 For the bot to work, you'll need to: 
 
- 1. edit `config.json` to include the relevant information as specified on the file,
- 2. get a Google Sheets api credentials file and rename it to `cred.json`. Then, place it on the same folder as `index.js` ,
- 3. Give editor access on the Sheet to the api email.
+ 1. Get a Google Sheets api credentials file (steps below) and copy paste its contents to line number 9,
+ 2. In line number 24, enter your Spreadsheet ID. This is the ID of your Google spreadsheet file, which can be found in the URL:
+ ``https://docs.google.com/spreadsheets/d/spreadSheetID/``
+ 3. Give editor access on the Sheet to the api email (next to `client_email` in the Google Sheets API credentials),
+ 4. In line number 54, enter your worksheet name. By default it is "Sheet1", "Sheet2", etc..., and
+ 5. Lastly, in line number 62 enter your bot token
 
-#### Editing the config.json file
-
- - Prefix can be anything you want. The message needs to start with this for it to update on the Google Sheets.
- - Specify the discord channel where the bot should work in `channelID`. To get this, enable developer mode in your discord, right click on the channel and click on "Copy ID".
- - `Token` is your bot token.
- - `spreadSheetID` is the ID of your Google spreadsheet file. This can be found in the URL of the Google Sheets file. 
- ``For instance; https://docs.google.com/spreadsheets/d/spreadSheetID/``
- - `sheetName` is the name of your work sheet. By default it is "Sheet1", "Sheet2", etc, unless you have changed it,
- - `confirmedReply` is what the bot will reply on the discord channel if it was successful in creating the row in Google Sheets.
 
 #### Steps to get the Google Sheets credentials file:
 
@@ -41,15 +35,9 @@ For the bot to work, you'll need to:
  12. In the "Keys" tab, click on "Add Key" > "Create new key",
  13. Select Key type as "JSON" and then create!
 
-Following these steps will download a .json file which should be renamed to cred.json and moved to the same folder as `index.js` of the bot. 
+Following these steps will download a .json file. Copy paste its content to line number 9 (and share the SpreadSheet file to `client_email` in the creds)
 
-From Step 11 above, copy the email address and share the Google Sheet file with the email address. Add this email address as an editor to the Google Sheet that you wish to use with this bot.
- 
  
 ## Running the bot
 
-After you have configured the necessary information, you can run the bot by running this command on a terminal (e.g. command prompt on windows) with
-
-    node --experimental-json-modules index.js
-
-Make sure to navigate to the folder location where you have the index.js file through the terminal first!
+After following steps above, install necessary packages listed in requirements.txt and then run the python file!
