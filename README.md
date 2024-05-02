@@ -3,7 +3,7 @@
 A bot that can create a new row on a Google Sheet from a message on a discord channel. Planning new features to enable plug and play!
 
 ## Preview
-
+![](https://github.com/Jay-Nepal/Discord-Message-to-Google-Sheets/blob/main/preview.gif)
 
 
 
