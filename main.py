@@ -10,7 +10,7 @@ google_creds = {
 }
 
 gc = gspread.service_account_from_dict(google_creds)
-sheets_all = gc.open_by_key("Your_Spreadsheet_ID")
+sheets_all = gc.open_by_key("Your_spreadsheet_ID")
 
 # Discord bot client definition
 client = Client(intents=Intents.ALL)
@@ -40,7 +40,7 @@ async def send_to_googlesheets(ctx, text_input: str):
     await AutoDefer.defer(auto_defer_with_ephemeral, ctx)
     current_time = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
-    worksheet = sheets_all.worksheet("Your_sheet_name")
+    worksheet = sheets_all.worksheet("your_sheet_name")
     next_row = next_available_row(worksheet)
     worksheet.update_acell("A{}".format(next_row), ctx.author.username)  # This sends the Discord Username
     worksheet.update_acell("B{}".format(next_row), text_input)  # This sends the text input sent through Discord command
@@ -48,5 +48,5 @@ async def send_to_googlesheets(ctx, text_input: str):
     await ctx.send(f'Hey {ctx.user.username}, your message has been recorded now!')
 
 
-bot_token = 'Your_bot_token'
+bot_token = 'your_bot_token'
 client.start(bot_token)
